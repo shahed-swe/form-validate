@@ -41,7 +41,8 @@
                     },
                     p_num: {
                         required: true,
-                        minlength: 10
+                        minlength: 10,
+                        maxlength: 10
                     },
                     pe_address: "required",
                     pr_address: "required",
@@ -69,61 +70,63 @@
                 var email = $("#email").val();
                 if (email) {
                     $("#p_num").css("display", "block");
+                    $("#number").css("display", "block");
                 } else {
                     $("#p_num").css("display", "none");
+                    $("#number").css("display", "none");
                 }
             });
             $("#p_num").on('input', function() {
-                var email = $("#p_num").val();
-                if (email) {
+                var input = $("#p_num").val();
+                if (input) {
                     $("#pe_address").css("display", "block");
                 } else {
                     $("#pe_address").css("display", "none");
                 }
             });
             $("#pe_address").on('input', function() {
-                var email = $("#pe_address").val();
-                if (email) {
+                var input = $("#pe_address").val();
+                if (input) {
                     $("#pr_address").css("display", "block");
                 } else {
                     $("#pr_address").css("display", "none");
                 }
             });
             $("#pr_address").on('input', function() {
-                var email = $("#pr_address").val();
-                if (email) {
+                var input = $("#pr_address").val();
+                if (input) {
                     $("#payment").css("display", "block");
                 } else {
                     $("#payment").css("display", "none");
                 }
             });
             $("#payment").on('input', function() {
-                var email = $("#payment").val();
-                if (email) {
+                var input = $("#payment").val();
+                if (input) {
                     $("#p_method").css("display", "block");
                 } else {
                     $("#p_method").css("display", "none");
                 }
             });
             $("#p_method").on('input', function() {
-                var email = $("#p_method").val();
-                if (email) {
+                var input = $("#p_method").val();
+                if (input) {
                     $("#tr_number").css("display", "block");
                 } else {
                     $("#tr_number").css("display", "none");
                 }
             });
             $("#tr_number").on('input', function() {
-                var email = $("#tr_number").val();
-                if (email) {
+                var input = $("#tr_number").val();
+                if (input) {
                     $("#amount").css("display", "block");
                 } else {
                     $("#amount").css("display", "none");
                 }
             });
             $("#amount").on('input', function() {
-                var email = $("#amount").val();
-                if (email) {
+                var input = $("#amount").val();
+                if (input) {
                     $("#total").css("display", "block");
                     $("#disp").css("display", "block");
                 } else {
@@ -132,12 +135,15 @@
                 }
             });
             $("#total").on('input', function() {
-                var email = $("#total").val();
-                if (email) {
+                var input = $("#total").val();
+                var input2 = $("#amount").val();
+                if (input) {
                     $("#tap").css("display", "block");
+                    $("#dash").append(input2);
                     $("#submit").css("display", "block");
 
                 } else {
+                    alert("Please input the value first!!");
                     $("#tap").css("display", "none");
                     $("#submit").css("display", "none");
                 }
@@ -190,9 +196,6 @@
                                     <option value="">Payment Method</option>
                                     <option value="bk">Bkash</option>
                                     <option value="bk">Bkash</option>
-                                    <option value="bk">Bkash</option>
-                                    <option value="bk">Bkash</option>
-                                    <option value="bk">Bkash</option>
                                 </select>
                             </div>
                         </div>
@@ -206,14 +209,14 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-5" style="margin-left: 20px">
-                                <input type="radio" class="form-check-input" name="total" value="yes" id="total" placeholder="Transaction Number">
-                                <label for="" id="disp">Do you want to keep down?</label>
+                                <input type="checkbox" class="form-check-input" name="total" value="yes" id="total" placeholder="Transaction Number">
+                                <label for="" class="form-check-label" id="disp">Do you want to keep down?</label>
                             </div>
                             <div class="form-group col-6" style="margin-left: 40px">
-                                <p id="tap">Then you have to pay 800</p>
+                                <p id="tap">Then you have to pay <span id="dash"></span></p>
                             </div>
                         </div>
-                        <input type="submit" class="btn btn-info shadow-none" name="submit" id="submit" value="Submit">
+                        <input type="submit" onclick="result()" class="btn btn-info shadow-none" name="submit" id="submit" value="Submit">
                 </div>
                 </form>
                 <!-- end of the form -->
