@@ -1,15 +1,19 @@
-.input-group-text{
-            background-color:#c7c7c7;
-        }
-        h2{
-            margin-left: 44%;
-        }
-        section{
-            margin-top: 20px;
-        }
-        body{
-            background-image: linear-gradient(90deg, white, gray);
-        }
-        .form-control:hover{
-            box-shadow: 5px 5px 3px gray;
-        }
+.input-group-text {
+    background-color: #c7c7c7;
+}
+
+h2 {
+    margin-left: 44%;
+}
+
+section {
+    margin-top: 20px;
+}
+
+body {
+    background-image: linear-gradient(90deg, white, gray);
+}
+
+.form-control:hover {
+    box-shadow: 5px 5px 3px gray;
+}

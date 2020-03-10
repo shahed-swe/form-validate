@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <title>Document</title>
+    <style>
+        .section-one {
+            border: 2px solid black;
+            margin: 0px 300px 0px 300px;
+        }
+        
+        .section-one h5 {
+            width: 108px;
+            margin-top: -15px;
+            margin-left: 10px;
+            background: white;
+        }
+        
+        .container {
+            margin: 10px;
+        }
+        
+        .row {
+            margin-right: 0px;
+        }
+        
+        h1 {
+            margin-left: 22%;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#regvalid").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    p_num: {
+                        required: true,
+                        minlength: 10
+                    },
+                    pe_address: "required",
+                    pr_address: "required",
+                    payment: "required",
+                    p_method: "required",
+                    tr_number: "required",
+                    amount: "required"
+                }
+            });
+
+            $("#submit").css("display", "none");
+            $("#p_num").css("display", "none");
+            $("#pe_address").css("display", "none");
+            $("#pr_address").css("display", "none");
+            $("#payment").css("display", "none");
+            $("#p_method").css("display", "none");
+            $("#tr_number").css("display", "none");
+            $("#amount").css("display", "none");
+            $("#number").css("display", "none");
+            $("#total").css("display", "none");
+            $("#disp").css("display", "none");
+            $("#tap").css("display", "none");
+
+            $("#email").on('input', function() {
+                var email = $("#email").val();
+                if (email) {
+                    $("#p_num").css("display", "block");
+                } else {
+                    $("#p_num").css("display", "none");
+                }
+            });
+            $("#p_num").on('input', function() {
+                var email = $("#p_num").val();
+                if (email) {
+                    $("#pe_address").css("display", "block");
+                } else {
+                    $("#pe_address").css("display", "none");
+                }
+            });
+            $("#pe_address").on('input', function() {
+                var email = $("#pe_address").val();
+                if (email) {
+                    $("#pr_address").css("display", "block");
+                } else {
+                    $("#pr_address").css("display", "none");
+                }
+            });
+            $("#pr_address").on('input', function() {
+                var email = $("#pr_address").val();
+                if (email) {
+                    $("#payment").css("display", "block");
+                } else {
+                    $("#payment").css("display", "none");
+                }
+            });
+            $("#payment").on('input', function() {
+                var email = $("#payment").val();
+                if (email) {
+                    $("#p_method").css("display", "block");
+                } else {
+                    $("#p_method").css("display", "none");
+                }
+            });
+            $("#p_method").on('input', function() {
+                var email = $("#p_method").val();
+                if (email) {
+                    $("#tr_number").css("display", "block");
+                } else {
+                    $("#tr_number").css("display", "none");
+                }
+            });
+            $("#tr_number").on('input', function() {
+                var email = $("#tr_number").val();
+                if (email) {
+                    $("#amount").css("display", "block");
+                } else {
+                    $("#amount").css("display", "none");
+                }
+            });
+            $("#amount").on('input', function() {
+                var email = $("#amount").val();
+                if (email) {
+                    $("#total").css("display", "block");
+                    $("#disp").css("display", "block");
+                } else {
+                    $("#total").css("display", "none");
+                    $("#disp").css("display", "none");
+                }
+            });
+            $("#total").on('input', function() {
+                var email = $("#total").val();
+                if (email) {
+                    $("#tap").css("display", "block");
+                    $("#submit").css("display", "block");
+
+                } else {
+                    $("#tap").css("display", "none");
+                    $("#submit").css("display", "none");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Registration For Convocation</h1>
+    <section class="section-one">
+        <h5>Apply Here</h5>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <!-- creating form -->
+                    <form id="regvalid" novalidate action="">
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input type="email" class="form-control col-md-12" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-6">
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text" id="number">
+                                            +880
+                                        </div>
+                                    </div>
+                                    <input type="text" class="form-control col-md-12" name="p_num" id="p_num" placeholder="Phone">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control col-md-12" name="pe_address" id="pe_address" placeholder="Permanent Address">
+                            </div>
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control col-md-12" name="pr_address" id="pr_address" placeholder="Present Address">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control col-md-12" name="payment" id="payment" placeholder="Payment Date">
+                            </div>
+                            <div class="form-group col-6">
+                                <select name="p_method" id="p_method" class="form-control col-md-12">
+                                    <option value="">Payment Method</option>
+                                    <option value="bk">Bkash</option>
+                                    <option value="bk">Bkash</option>
+                                    <option value="bk">Bkash</option>
+                                    <option value="bk">Bkash</option>
+                                    <option value="bk">Bkash</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control col-md-12" name="tr_number" id="tr_number" placeholder="Transaction Number">
+                            </div>
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control col-md-12" name="amount" id="amount" placeholder="Amount">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-5" style="margin-left: 20px">
+                                <input type="radio" class="form-check-input" name="total" value="yes" id="total" placeholder="Transaction Number">
+                                <label for="" id="disp">Do you want to keep down?</label>
+                            </div>
+                            <div class="form-group col-6" style="margin-left: 40px">
+                                <p id="tap">Then you have to pay 800</p>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-info shadow-none" name="submit" id="submit" value="Submit">
+                </div>
+                </form>
+                <!-- end of the form -->
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
