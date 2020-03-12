@@ -95,7 +95,7 @@ $(document).ready(function() {
     });
 
     $('#submit').click(function() {
-        event.preventDefault();
+        // event.preventDefault();
         var amount = $('#amount').val();
         var take = parseInt(amount);
         if ($('input[type="checkbox"]').is(":checked")) {
@@ -104,7 +104,7 @@ $(document).ready(function() {
             } else {
                 alert("Not Done Yet");
             }
-        } else if ($('input[type="checkbox"]').is(":not(:checked)")) {
+        } else {
             alert("You have to pay " + (take));
         }
     });

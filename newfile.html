@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <link rel="stylesheet" href="newstyle.css">
+    <script>
+        $(document).ready(function() {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+                $("#make-as").append("<li id='all'>" + i + "</li>");
+            }
+        });
+    </script>
+    <style>
+        body {
+            margin: 10px;
+        }
+        
+        .imit {
+            margin: 100px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="section-one">
+        <h1 class="psudo-element">Shahed Talukder</h1>
+
+        <input type="text" class="form-control hello">
+
+        <ul>
+            <li>Hello</li>
+            <li>Nayem</li>
+            <li>Shahed</li>
+            <li>Ashik</li>
+            <li>Azad</li>
+        </ul>
+        <div class="imit" id="imit">
+            <div class="card" id="init">
+                <div class="card border-primary">
+                    <img class="card-img-top" src="holder.js/100px180/" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Text</p>
+                        <ul id="make-as"></ul>
+                        <div class="slide-left">
+                            <p>Id: 173-35-258</p>
+                        </div>
+                        <div class="slide-right">
+                            <p>
+                                Md Shahed Talukder
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-two">
+        <div class="take one"></div>
+        <div class="take two"></div>
+        <div class="take three"></div>
+    </section>
+    <section class="image-rotate-class">
+        <div class="col-12 col-lg-8 m-auto">
+            <img src="shahed.jpg" class="image-tan" alt="" height="320" width="320">
+        </div>
+    </section>
+
+    <section>
+
+    </section>
+    <section>
+
+    </section>
+</body>
+
+</html>
+
+
+<!-- 
+    style powers
+
+    h1< class < id < inline style < !importand
+
+    !importand -- this is bang important
+ -->

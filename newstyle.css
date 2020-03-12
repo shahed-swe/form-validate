@@ -1,0 +1,175 @@
+.section-one {
+    height: 1000px;
+    border: 1px solid black;
+}
+
+.section-one .psudo-element {
+    color: tomato;
+    font-size: x-large;
+    background-color: greenyellow;
+    width: 250px;
+}
+
+.section-one .psudo-element:hover {
+    color: tomato;
+    font-size: large;
+    background-color: greenyellow;
+    width: 250px;
+}
+
+.hello:focus {
+    font-weight: 700;
+    color: green;
+    background-color: hotpink;
+}
+
+
+/* li:first-child {
+    background-color: hotpink;
+} */
+
+li {
+    list-style-type: none;
+}
+
+li:nth-child(n):hover {
+    margin-left: 20px;
+    background-color: greenyellow;
+    width: 250px;
+}
+
+.section-one {
+    margin: 0px;
+}
+
+li:hover::before {
+    margin-right: 10px;
+    content: "❤";
+    background-color: green;
+}
+
+.section-two {
+    border: 1px solid black;
+    height: 1000px;
+    margin: 10px;
+}
+
+.take {
+    height: 100px;
+    width: 100px;
+}
+
+.one {
+    margin: 2px;
+    background-color: greenyellow;
+}
+
+.one:hover {
+    margin: 2px;
+    background-color: tomato;
+}
+
+
+/* position: absolute */
+
+
+/* position: relative */
+
+
+/* position: fixed */
+
+.two {
+    margin: 2px;
+    background-color: palevioletred;
+    position: relative;
+    left: 100px;
+    /* top: -90px; */
+}
+
+.two:hover {
+    margin: 2px;
+    background-color: greenyellow;
+}
+
+.three {
+    margin: 2px;
+    background-color: tomato;
+}
+
+.three:hover {
+    margin: 2px;
+    background-color: palevioletred;
+}
+
+.image-tan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    height: 320px;
+    margin: -60px 0 0 -60px;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(350deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.slide-right {
+    width: 50%;
+    overflow: hidden;
+    color: red;
+}
+
+.slide-right p {
+    animation: 2s slide-right;
+}
+
+@keyframes slide-right {
+    from {
+        margin-left: -100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.slide-left {
+    width: 50%;
+    overflow: hidden;
+    color: red;
+}
+
+.slide-left p {
+    animation: 2s slide-left;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}

@@ -8,9 +8,10 @@
     <script src="validationjs.js"></script>
     <style>
         .form-section {
-            border: 1px solid black;
+            border: 1px solid lightgray;
             margin: 10px;
             border-radius: 5px;
+            box-shadow: 10px 10px 5px gray;
         }
         
         .form-section h6 {
@@ -33,15 +34,16 @@
         <h6>Apply Here</h6>
         <form class="form-class" id="validform">
             <div class="form-row">
-                <div class="form-group col-6">
+                <div class="form-group col-md-6">
                     <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email Address">
                 </div>
                 <div class="form-group col-6">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <div class="input-group-text">+880</div>
+                            <div class="input-group-text">+880
+                            </div>
                         </div>
-                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter phone number">
+                        <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter phone number" pattern="[0-9]+">
                     </div>
                 </div>
                 <div class="form-group col-6">
@@ -67,12 +69,12 @@
                     <input type="text" class="form-control" name="amount" id="amount" placeholder="Enter the amount you have to pay">
                 </div>
                 <div class="form-group col-6">
-                    <div class="custom-control custom-checkbox">
+                    <div class="custom-control">
                         <input type="checkbox" class="form-check-input" id="take">
                         <label class="form-check-label" for=""> Do you want to grown?</label>
                     </div>
                 </div>
-                <div class="form-group custom-control custom-group col-6">
+                <div class="form-group custom-control col-6">
                     <!-- <input type="checkbox" class="form-check-input" value="yes"> -->
                     <label class="form-check-label" for=""> Then you have to pay 800 Taka</label>
                 </div>
